@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PknuWPF", "PknuWPF.csproj", "{05B950B7-84B4-4DAE-8B02-5DADF1F87543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeShopApp", "..\BikeShopApp\BikeShopApp.csproj", "{550538F7-10D1-4DDF-B30D-04990A1DE23A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05B950B7-84B4-4DAE-8B02-5DADF1F87543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B950B7-84B4-4DAE-8B02-5DADF1F87543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B950B7-84B4-4DAE-8B02-5DADF1F87543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B950B7-84B4-4DAE-8B02-5DADF1F87543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550538F7-10D1-4DDF-B30D-04990A1DE23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550538F7-10D1-4DDF-B30D-04990A1DE23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550538F7-10D1-4DDF-B30D-04990A1DE23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550538F7-10D1-4DDF-B30D-04990A1DE23A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E2BF46F-03C0-4558-87EB-2C7B9CD5A9E8}
+	EndGlobalSection
+EndGlobal
