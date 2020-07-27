@@ -6,7 +6,17 @@
       xmlns:local="clr-namespace:BikeShopApp"
       mc:Ignorable="d" 
       d:DesignHeight="380" d:DesignWidth="800"
-      Title="Contact">
+      Background="{DynamicResource Page_Background}"
+      Title="Contact"
+    >
+    <Page.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="Page_Background">
+                <GradientStop Color= "Aquamarine" Offset="0" />
+                <GradientStop Color="Beige" Offset="1"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </Page.Resources>
     <Grid Loaded="Grid_Loaded">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>

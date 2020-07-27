@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:BikeShopApp"
       mc:Ignorable="d" 
       d:DesignHeight="380" d:DesignWidth="800"
-      Title="Menu">
+      Title="Menu"
+      Background="{StaticResource Page_Background}">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -22,17 +23,20 @@
         <Button x:Name="BtnProduct" 
                 Grid.Row="1" Grid.Column="0" 
                 Margin="20"
-                Content="Product" FontSize="30"
+                Content="Product" 
+                Style="{StaticResource Pknu_NewButton}"
                 Click="BtnProduct_Click"/>
         <Button x:Name="BtnLiveSupport"
                 Grid.Row="1" Grid.Column="1" 
                 Margin="20"
-                Content="Live Support" FontSize="30" 
+                Content="Live Support" 
+                Style="{StaticResource Pknu_NewButton}"
                 Click="BtnLiveSupport_Click"/>
         <Button x:Name="BtnEmailSupport"
                 Grid.Row="1" Grid.Column="2" 
                 Margin="20"
-                Content="Email Support" FontSize="30"
+                Content="Email Support"
+                Style="{StaticResource Pknu_NewButton}"
                 Click="BtnEmailSupport_Click"/>
         <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
                    TextAlignment="Center" Text="Bike Shop" 

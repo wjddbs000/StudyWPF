@@ -29,5 +29,10 @@ namespace BikeShopApp
         {
 
         }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

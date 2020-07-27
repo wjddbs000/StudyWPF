@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BikeShopApp"
         mc:Ignorable="d"
-        Title="MainWindow">
-    <Grid >
-        <Frame x:Name="MainFrame" Source="Menu.xaml" NavigationUIVisibility="Visible"/>
+        Height="{StaticResource Pknu_Height}"
+        Width="{StaticResource Pknu_Width}"
+        Title="{StaticResource Pknu_Title}">
+    <Grid Loaded="Grid_Loaded">
+        <Frame x:Name="MainFrame" Source="/BikeShopApp;Component/Menu.xaml" NavigationUIVisibility="Visible" />
     </Grid>
 </Window>
