@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\ThirdCaliburnApp - 복사본\Test.csproj", "{E23239EC-5721-4B8A-8D53-FF5A95BE78A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test3", "Test3\Test3.csproj", "{14ECD33F-35EB-4747-AE09-70CC88D4C843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test4", "test4\test4.csproj", "{29E9284F-FC1F-4FB6-AC9A-525BA3840DCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E23239EC-5721-4B8A-8D53-FF5A95BE78A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23239EC-5721-4B8A-8D53-FF5A95BE78A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23239EC-5721-4B8A-8D53-FF5A95BE78A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23239EC-5721-4B8A-8D53-FF5A95BE78A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14ECD33F-35EB-4747-AE09-70CC88D4C843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14ECD33F-35EB-4747-AE09-70CC88D4C843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14ECD33F-35EB-4747-AE09-70CC88D4C843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14ECD33F-35EB-4747-AE09-70CC88D4C843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E9284F-FC1F-4FB6-AC9A-525BA3840DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E9284F-FC1F-4FB6-AC9A-525BA3840DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E9284F-FC1F-4FB6-AC9A-525BA3840DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E9284F-FC1F-4FB6-AC9A-525BA3840DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7D8DDAF-4C6A-40DC-854C-4741CADF918D}
+	EndGlobalSection
+EndGlobal
