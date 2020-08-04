@@ -7,6 +7,9 @@ using System.Windows;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Utilities;
 using InteractiveDataDisplay.WPF;
+using LiveCharts;
+using System.Linq;
+using System.Windows.Shapes;
 
 namespace test4
 {
@@ -15,8 +18,8 @@ namespace test4
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        List<int> x = new List<int>();
-        List<int> y = new List<int>();
+        public ChartValues<double> LineValues {get;set;}
+        List<double> lineValues = new List<double>();
         int time = 0;
         SerialPort serial;
         private short xCount = 200;
@@ -30,14 +33,12 @@ namespace test4
         public bool IsSimulation { get; set; }
         public MainWindow()
         {
+
             InitializeComponent();
             InitControls();
             InitChart();
         }
 
-        private void InitChart()
-        {
-        }
         private void InitControls()
         {
             foreach (var item in SerialPort.GetPortNames())
@@ -74,6 +75,7 @@ namespace test4
             try
             {
                 ushort v = ushort.Parse(sVal);
+                double cv = double.Parse(sVal);
                 if (v < 0 || v > maxPhotoVal)
                     return;
 
@@ -86,18 +88,24 @@ namespace test4
                 LblPhotoRegistor.Content = v.ToString();
 
                 string item = $"{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}\t{v}";
-
+                if (AxisX.MaxValue < 200)
+                    AxisX.MaxValue++;
                 RtbLog.AppendText($"{item}\n");
                 RtbLog.ScrollToEnd();
-                x.Add(time++);
-                y.Add(data.Value);
-                ChtSensorValues.Plot(x, y);
+                LineValues.Add(cv);
+                DataContext = this;
             }
             catch (Exception ex)
             {
                 RtbLog.AppendText($"Error : {ex.Message}\n");
                 RtbLog.ScrollToEnd(); //RtbLog.ScrollToCaret();
             }
+        }
+        public Func<double, string> XFormatter { get; set; }
+        private void InitChart()
+        {
+            LineValues = new ChartValues<double>();
+            XFormatter = val => new DateTime((long)val).ToString("ss");
         }
 
         private void InsertDataToDB(SensorData data)
@@ -142,7 +150,8 @@ namespace test4
 
         private void BtnConnect_Click(object sender, RoutedEventArgs e)
         {
-            serial.Open();
+            if(serial != null)
+                serial.Open();
             LblConnectionTime.Text = $"연결시간 : {DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")}";
             BtnConnect.IsEnabled = false;
             BtnDisconnect.IsEnabled = true;
@@ -168,9 +177,20 @@ namespace test4
             BtnConnect_Click(sender, e);
         }
 
-        private void Port_Click(object sender, RoutedEventArgs e)
+        private void btnAll_Click(object sender, RoutedEventArgs e)
         {
+            AxisX.MaxValue = xCount;
+        }
 
+        private void btnZoom_Click(object sender, RoutedEventArgs e)
+        {
+            AxisX.MaxValue = photoDatas.Count;
+        }
+
+        private void Info_Click(object sender, RoutedEventArgs e)
+        {
+            ThisProgramForm form = new ThisProgramForm();
+            form.ShowDialog();
         }
     }
 }
