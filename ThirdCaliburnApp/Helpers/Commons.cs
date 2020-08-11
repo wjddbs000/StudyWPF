@@ -1,9 +1,16 @@
-﻿namespace ThirdCaliburnApp.Helpers
+﻿using System.Text.RegularExpressions;
+
+namespace ThirdCaliburnApp.Helpers
 {
     public class Commons
     {
         public static readonly string CONNSTRING =
             "Data Source=localhost;Port=3306;Database=testdb;uid=root;password=mysql_p@ssw0rd";
+        internal static bool IsNumeric(string text)
+        {
+            Regex regex = new Regex("[^0-9.-]+");
+            return !regex.IsMatch(text);
+        }
 
     }
     public class EmployeesTbl

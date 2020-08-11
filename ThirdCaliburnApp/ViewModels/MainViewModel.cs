@@ -18,7 +18,7 @@ namespace ThirdCaliburnApp.ViewModels
         private readonly IDialogService nativeDialogService;
         public MainViewModel(IWindowManager windowManager, IDialogService nativeDialogService)
         {
-            this.windowManager =windowManager;
+            this.windowManager = windowManager;
             this.nativeDialogService = nativeDialogService;
             GetEmployees();
         }
@@ -105,13 +105,14 @@ namespace ThirdCaliburnApp.ViewModels
             set
             {
                 selectedEmployee = value;
-
-                Id = value.Id;
-                EmpName = value.EmpName;
-                Salary = value.Salary;
-                DeptName = value.DeptName;
-                Destination = value.Destination;
-
+                if (value == null)
+                {
+                    Id = value.Id;
+                    EmpName = value.EmpName;
+                    Salary = value.Salary;
+                    DeptName = value.DeptName;
+                    Destination = value.Destination;
+                }
                 NotifyOfPropertyChange(() => selectedEmployee);
             }
         }
@@ -175,7 +176,8 @@ namespace ThirdCaliburnApp.ViewModels
                 MySqlParameter paramDestination = new MySqlParameter("@Destination", MySqlDbType.VarChar, 45);
                 paramDestination.Value = Destination;
                 cmd.Parameters.Add(paramDestination);
-                if (Id != 0) { 
+                if (Id != 0)
+                {
                     MySqlParameter paramId = new MySqlParameter("@Id", MySqlDbType.Int32);
                     paramId.Value = Id;
                     cmd.Parameters.Add(paramId);
@@ -266,6 +268,6 @@ namespace ThirdCaliburnApp.ViewModels
         {
             get => !(Id == 0);
         }
-        
+
     }
 }

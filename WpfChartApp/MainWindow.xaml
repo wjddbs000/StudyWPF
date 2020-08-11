@@ -10,8 +10,8 @@
     <Grid>
         <d3:Chart BottomTitle="Time" LeftTitle="PhotoValue" Background="WhiteSmoke">
             <d3:LineGraph x:Name="lineGraph" Description="Photo Registor Value"
-                          Stroke="Red" StrokeThickness="4"/>
-
+                          Stroke="Red" StrokeThickness="4" MaxHeight="100" MaxWidth="100" MinHeight="0" MinWidth="0"/>
+        
         </d3:Chart>
     </Grid>
 </Window>

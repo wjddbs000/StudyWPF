@@ -103,7 +103,9 @@
             <TextBox x:Name="Salary" Grid.Row="2" Grid.Column="1" Margin="2"
                      materialDesign:HintAssist.Hint="Salary(급여)"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                     VerticalAlignment="Center"/>
+                     VerticalAlignment="Center"
+                     MaxLength="10"
+                     PreviewTextInput="Salary_PreviewTextInput"/>
             <TextBox x:Name="DeptName" Grid.Row="3" Grid.Column="1" Margin="2"
                      materialDesign:HintAssist.Hint="DeptName(직장명)"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}"

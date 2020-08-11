@@ -24,5 +24,6 @@ namespace ThirdCaliburnApp.Views
         {
             InitializeComponent();
         }
+
     }
 }
